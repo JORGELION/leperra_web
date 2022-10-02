@@ -1,0 +1,39 @@
+{% extends "plantilla/base.html" %}
+
+{% block titulo %} {{ producto.nombre }} {% endblock %}
+
+{% block contenido %}
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-8">
+
+            <div class="card text-center">
+                <div class="card-body">
+                    <img src="{{producto.imagen.url}}" class="card-img-top" alt="producto" style="max-width: 540px;">
+                    <h1 class="card-title text">{{producto.nombre}}</h1>
+                    <h5 class="card-title">{{producto.categoria}}</h5>
+                    <p class="card-text">{{producto.descripcion}}</p>
+                    <a href="{% url 'Add' producto.id %}" class="btn btn-primary">Agregar al carrito</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-4">
+
+            {% if user.is_authenticated %}
+                {% include "carrito.html" %}
+            {% else %}
+                <div class="alert alert-danger text-center">Debes iniciar sesion para ver el carro</div>
+                        
+            {% endif %}
+
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

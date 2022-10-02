@@ -1,0 +1,61 @@
+{% extends "plantilla/base.html" %}
+
+{% block titulo %} Contactenos {% endblock %}
+
+{% block contenido %}
+
+
+
+<div class="container">
+    <div class="row text-center">
+        
+        <h1 class="">Contactenos</h1>
+        <img src="../../static/sitioweb/img/Imagen_portada.jpg" alt="Portada" class="text-center">
+
+
+    </div>
+    <div class="row justify-content-around">
+
+        <div class="col-4">
+
+            <p class="fs-5">
+                Un placer comunicarnos contigo y atender tus inquietudes en Le Perrá nos transformamos para tu bienestar. ¿Con quien tengo el gusto?
+            </p>
+
+            <p><a href="" class="IconoContacto"><img src="../../static/sitioweb/icons/Telefono_icon.png" alt="Telefono" width="15px"> 312-7777-777 </a></p>
+            <p><a href="" class="IconoContacto"><img src="../../static/sitioweb/icons/email_icon.png" alt="Correo"  width="15px"> contacto@leperra.co </a></p>
+            <p><a href="" class="IconoContacto"><img src="../../static/sitioweb/icons/ciudad_icon.png" alt="País"  width="15px"> Colombia </a></p>
+
+
+        </div>
+
+        
+
+        <div class="col-4">
+
+            <form>
+                <div class="form-group">
+                  <label for="exampleFormControlInput1">Nombre</label>
+                  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ingresa tu nombre">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Correo electronico</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="tucorreo@ejemplo.com">
+                  </div>
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">Example textarea</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+
+                <input type="submit" name="enviar" value="enviar mensaje" class="btn btn-primary">
+
+            </form>
+        </div>
+
+        
+
+
+    </div>
+</div>
+
+{% endblock %}

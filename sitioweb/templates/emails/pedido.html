@@ -1,0 +1,17 @@
+{% extends "plantilla/base.html" %}
+
+{% block titulo %} Pedido {% endblock %}
+
+    {% block contenido %}
+
+    <div class="container text-center ">
+        <br>
+        Hola {{nombreusuario}} <br>
+        N° de pedido: {{pedido.id}} <br>
+        Email del usuario: {{emailusuario}} <br>
+        Lineas de pedido: {{lineas_pedido}}
+
+    </div>
+    
+
+    {% endblock %}

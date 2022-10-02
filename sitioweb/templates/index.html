@@ -1,0 +1,49 @@
+{% extends "plantilla/base.html" %}
+
+{% block titulo %} Inicio {% endblock %}
+
+
+{% block contenido %}
+
+    
+    <div class="container">
+
+        <div class="row">
+            <div class="col-8">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row">
+                            {% for producto in productos %}
+                                <div class="col-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <a href="{% url 'ver_producto' producto.id %}"><img src="{{producto.imagen.url}}" class="card-img-top"></a>
+                                            
+                                            <h5 class="card-title"><a href="{% url 'ver_producto' producto.id %}"> {{producto.nombre}}</a></h5>
+                                            <p class="card-text">{{producto.categoria}}</p>
+                                            <p class="card-text">${{producto.precio}}</p>
+                                            <a href="{% url 'Add' producto.id %}" class="btn btn-primary">Agregar al carrito</a>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                {% if user.is_authenticated %}
+                    {% include "carrito.html" %}
+                {% else %}
+                    <div class="alert alert-danger text-center">Debes iniciar sesion para ver el carro</div>
+                    
+                {% endif %}
+            </div>
+        </div>
+
+
+
+    </div>
+
+{% endblock %}

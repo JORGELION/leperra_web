@@ -1,0 +1,152 @@
+{% load static %}
+<!doctype html>
+<html lang="es">
+
+<head>
+  <title>{% block titulo %}  {% endblock %}</title>
+  <link rel="icon" href="../../../static/sitioweb/icons/Favicon_logo_64x64.png">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="../../../static/sitioweb/css/inicio.css">
+  <!-- Bootstrap CSS v5.2.0-beta1 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+
+<body class="cuerpo">
+  <header class="my-5">
+    <!-- place navbar here -->
+    <div class="container-fluid">
+    <img src="../../../static/sitioweb/icons/LE_PERRA_LOGO.png" alt="Logo Principal" class="img-fluid d-block mx-auto" width="150" height="auto">
+    </div>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/nosotros/">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/contactenos/">Contactenos</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Productos
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+              <p class="nav-link">{{user.username}}</a>
+            </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="/logout/">Cerrar Sesion</a>
+              </li>
+            {% else %}
+
+            <li class="nav-item">
+              <a class="nav-link" href="/login/">Inicio Sesion</a>
+            </li>
+
+            {% endif %}
+              
+              
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+  {% block contenido %} {% endblock %}
+
+  <footer>
+    <!-- place footer here -->
+    <div class="container my-5">
+      <!-- Footer -->
+      <footer class="text-center text-white" style="background-color: #00000087">
+        <!-- Grid container -->
+        <div class="container">
+          <!-- Section: Links -->
+          <section class="mt-5">
+            <!-- Grid row-->
+            <div class="row text-center d-flex justify-content-center pt-5">
+              <!-- Grid column -->
+              <div class="col-md-2">
+                <h6 class="text-uppercase font-weight-bold">
+                  <a href="/" class="text-white">Inicio</a>
+                </h6>
+              </div>
+              <!-- Grid column -->
+    
+              <!-- Grid column -->
+              <div class="col-md-2">
+                <h6 class="text-uppercase font-weight-bold">
+                  <a href="/nosotros/" class="text-white">Nosotros</a>
+                </h6>
+              </div>
+              <!-- Grid column -->
+    
+              <!-- Grid column -->
+              <div class="col-md-2">
+                <h6 class="text-uppercase font-weight-bold">
+                  <a href="/contactenos/" class="text-white">Contactenos</a>
+                </h6>
+              </div>
+              <!-- Grid column -->
+    
+              <!-- Grid column -->
+            </div>
+            <!-- Grid row-->
+          </section>
+          <!-- Section: Links -->
+    
+          <hr class="my-5" />
+    
+          <!-- Section: Text -->
+          <section class="mb-5">
+            <div class="row d-flex justify-content-center">
+              <div class="col-lg-8">
+                <p>
+                  PROYECTO PROGRAMACION WEB/51156/PRIMER BLOQUE/22V04 ACA 3
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- Section: Text -->
+        </div>
+        <!-- Grid container -->
+
+      </footer>
+      <!-- Footer -->
+    </div>
+    <!-- End of .container -->
+
+
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+    integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
