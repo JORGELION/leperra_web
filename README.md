@@ -3,9 +3,21 @@
 - Tener instalado python. (Actualmente lla version 3.10.7)
 - Estanto en el directorio de la carpeta ejecutar este comando: 
 
+pip install virtualenv
+
+-Luego:
+
+virtualenv venv
+
+-Se creara un entorno virtual aislado en una carpeta llamada venv. Luego:
+
 .\venv\Scripts\activate
 
-para activar el servidor ejecutas el siguiente comando:
+-Activaremos el entorno virtual. Luego ejecutar este comando:
+
+pip install -r requirements.txt
+
+-Instalara todas las dependencias. Para correr el servidor ejecutas el siguiente comando:
 
 .\manage.py runserver 
 
