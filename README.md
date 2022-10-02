@@ -5,19 +5,19 @@
 
 pip install virtualenv
 
--Luego:
+- Luego:
 
 virtualenv venv
 
--Se creara un entorno virtual aislado en una carpeta llamada venv. Luego:
+- Se creara un entorno virtual aislado en una carpeta llamada venv. Luego:
 
 .\venv\Scripts\activate
 
--Activaremos el entorno virtual. Luego ejecutar este comando:
+- Activaremos el entorno virtual. Luego ejecutar este comando:
 
 pip install -r requirements.txt
 
--Instalara todas las dependencias. Para correr el servidor ejecutas el siguiente comando:
+- Instalara todas las dependencias. Para correr el servidor ejecutas el siguiente comando:
 
 python .\manage.py runserver
 
@@ -25,9 +25,9 @@ y luego presionar ctrl al link que genere el servidor. Por defecto es: http://12
 
 
 ACA 3 PROGRAMACION WEB/51156/PRIMER BLOQUE/22V04
--Integrantes:
+- Integrantes:
 
-  -María Angélica Restrepo Bolaños
-  -María Camila Luna Aconcha
-  -Andrés Felipe Hernández Gómez
-  -Jorge Andres Gomez Castillo
+  - María Angélica Restrepo Bolaños
+  - María Camila Luna Aconcha
+  - Andrés Felipe Hernández Gómez
+  - Jorge Andres Gomez Castillo
