@@ -19,6 +19,6 @@ pip install -r requirements.txt
 
 -Instalara todas las dependencias. Para correr el servidor ejecutas el siguiente comando:
 
-.\manage.py runserver 
+python .\manage.py runserver
 
 y luego presionar ctrl al link que genere el servidor. Por defecto es: http://127.0.0.1:8000/
